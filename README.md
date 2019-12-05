@@ -1,5 +1,7 @@
 # Adonis FCM (Firebase Cloud Messaging)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/lookinlab/adonis-fcm.svg)](https://greenkeeper.io/)
+
 > Works with AdonisJS v4.*
 
 This wrapper for send messages to Firebase Cloud Messaging with help [node-gcm](https://github.com/ToothlessGear/node-gcm)
