@@ -1,0 +1,53 @@
+{
+  "name": "adonis-fcm",
+  "version": "0.1.0",
+  "description": "Microservice for send messages to Firebase Cloud Messaging",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "test": "DB=sqlite nyc node japaFile.js",
+    "posttest": "npm run coverage",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lookinlab/adonis-fcm.git"
+  },
+  "keywords": [
+    "adonisjs",
+    "adonis-fcm",
+    "adonis-firebase",
+    "adonis-cloud-messaging",
+    "adonis-push-notification"
+  ],
+  "author": "LookinGit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lookinlab/adonis-fcm/issues"
+  },
+  "dependencies": {
+    "@adonisjs/generic-exceptions": "^3.0.1",
+    "node-gcm": "^1.0.2"
+  },
+  "devDependencies": {
+    "@adonisjs/ace": "^5.0.5",
+    "@adonisjs/fold": "^4.0.9",
+    "@adonisjs/lucid": "^6.1.2",
+    "@adonisjs/sink": "^1.0.17",
+    "coveralls": "^3.0.2",
+    "japa": "^2.0.3",
+    "lodash": "^4.17.11",
+    "nyc": "^13.0.1",
+    "sqlite3": "^4.0.2",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "globals": [
+      "use"
+    ]
+  },
+  "directories": {
+    "test": "test"
+  }
+}
