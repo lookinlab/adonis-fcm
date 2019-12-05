@@ -1,7 +1,7 @@
 {
   "name": "adonis-fcm",
   "version": "0.1.0",
-  "description": "Microservice for send messages to Firebase Cloud Messaging",
+  "description": "Firebase Cloud Messaging for AdonisJS",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
