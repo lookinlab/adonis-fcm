@@ -1,6 +1,8 @@
 # Adonis FCM (Firebase Cloud Messaging)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/lookinlab/adonis-fcm.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/lookinlab/adonis-fcm.svg?branch=develop)](https://travis-ci.org/lookinlab/adonis-fcm)
+[![Coverage Status](https://coveralls.io/repos/github/lookinlab/adonis-fcm/badge.svg?branch=develop)](https://coveralls.io/github/lookinlab/adonis-fcm?branch=develop)
 
 > Works with AdonisJS v4.*
 
