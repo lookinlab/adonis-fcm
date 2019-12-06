@@ -104,12 +104,12 @@ Notification.created = async (instance) => {
 
 ## Methods
 ### FCM.message(params) - return a Message instance
-- params:  {Object} - [Docs](https://firebase.google.com/docs/cloud-messaging/concept-options) about object of message
+- params:  {Object} - [Additional Message Options](https://github.com/ToothlessGear/node-gcm#additional-message-options) and [Notification Payload](https://github.com/ToothlessGear/node-gcm#notification-payload-option-table)
 ### FCM.send(message, options, numberOfTimes) - return a Promise
-- message: {Object} || FCM.message({Object})
+- message: {Object|Message}
 - options: {Object} - [Docs](https://github.com/ToothlessGear/node-gcm#recipients)
 ### FCM.sendNoRetry(message, options) - return a Promise
-- message: {Object} || FCM.message({Object})
+- message: {Object|Message}
 - options: {Object} - [Docs](https://github.com/ToothlessGear/node-gcm#recipients)
  
 ## Answers:
