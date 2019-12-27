@@ -101,7 +101,7 @@ const Notification = exports = module.exports = {};
 Notification.created = async (instance) => {
   const { title, text } = instance.toJSON();
 
-  const recipients = { topic: 'notifications' }; // or { registrationTokens: [...] }
+  const recipients = { condition: "'notifications' in topics" }; // or { registrationTokens: [...] }
   const response = await FCM.send({ notification: { title, body: text }}, recipients);
 };
 ```
