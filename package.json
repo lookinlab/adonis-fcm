@@ -6,6 +6,7 @@
   "files": [
     "build/adonis-typings",
     "build/providers",
+    "build/templates",
     "build/src"
   ],
   "scripts": {
@@ -13,7 +14,8 @@
     "pretest": "npm run lint",
     "test": "node japaFile.js",
     "clean": "rm -rf build",
-    "compile": "npm run lint && npm run clean && tsc",
+    "compile": "npm run lint && npm run clean && tsc && npm run copy:files",
+    "copy:files": "copyfiles \"templates/*.txt\" build",
     "build": "npm run compile",
     "prepublishOnly": "npm run build"
   },
@@ -41,6 +43,7 @@
     "@adonisjs/fold": "^6.3.3",
     "@adonisjs/mrm-preset": "^2.3.0",
     "@types/node": "^13.13.1",
+    "@types/node-gcm": "^1.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-adonis": "^1.0.8",
     "japa": "^3.0.1",
@@ -51,6 +54,14 @@
     "test": "test"
   },
   "adonisjs": {
+    "templates": {
+      "config": [
+        "fcm.txt"
+      ]
+    },
+    "env": {
+      "FCM_API_KEY": ""
+    },
     "types": "adonis-fcm",
     "providers": [
       "adonis-fcm"
