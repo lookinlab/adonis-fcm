@@ -3,6 +3,11 @@
   "version": "1.0.0-rc",
   "description": "Firebase Cloud Messaging for AdonisJS",
   "main": "./build/providers/FCMProvider.js",
+  "files": [
+    "build/adonis-typings",
+    "build/providers",
+    "build/src"
+  ],
   "scripts": {
     "lint": "eslint . --ext=.ts",
     "pretest": "npm run lint",
@@ -44,5 +49,11 @@
   },
   "directories": {
     "test": "test"
+  },
+  "adonisjs": {
+    "types": "adonis-fcm",
+    "providers": [
+      "adonis-fcm"
+    ]
   }
 }
