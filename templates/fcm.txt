@@ -1,7 +1,7 @@
 import Env from '@ioc:Adonis/Core/Env'
 import { FCMConfig } from '@ioc:Adonis/Addons/FCM'
 
-export default const config: FCMConfig = {
+const fcmConfig: FCMConfig = {
   /*
   |--------------------------------------------------------------------------
   | API KEY
@@ -10,10 +10,11 @@ export default const config: FCMConfig = {
   | The key api Firebase Cloud Messaging
   |
   */
-  apiKey: Env.get('FCM_API_KEY'),
+  apiKey: Env.get('FCM_API_KEY') as string,
 
   requestOptions: {
     // proxy: 'http://127.0.0.1',
     // timeout: 5000
   }
 }
+export default fcmConfig
