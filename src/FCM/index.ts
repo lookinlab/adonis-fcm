@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { FCMConfig, FCMContract, FCMMessage } from 'ioc:Adonis/Addons/FCM'
+import { FCMConfig, FCMContract, FCMMessage } from '@ioc:Adonis/Addons/FCM'
 import { IResponseBody, Message, Sender } from 'node-gcm'
 import FakeFCM from './Fake'
 

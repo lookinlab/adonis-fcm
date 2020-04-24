@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { FakeFCMContract } from 'ioc:Adonis/Addons/FCM'
+import { FakeFCMContract } from '@ioc:Adonis/Addons/FCM'
 
 /**
  * Fake FCM is used to send fake messages

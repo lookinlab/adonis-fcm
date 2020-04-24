@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-declare module 'ioc:Adonis/Addons/FCM' {
+declare module '@ioc:Adonis/Addons/FCM' {
   import { IMessageOptions, IResponseBody, ISenderOptions, Message } from 'node-gcm'
   import { IRecipient, ISenderSendOptions } from 'node-gcm'
 

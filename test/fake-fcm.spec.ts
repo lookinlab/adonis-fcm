@@ -8,8 +8,8 @@
  */
 
 import test from 'japa'
+import { FCMMessage } from '@ioc:Adonis/Addons/FCM'
 import FakeFCM from '../src/FCM/Fake'
-import { FCMMessage } from 'ioc:Adonis/Addons/FCM'
 import FCM from '../src/FCM'
 
 test.group('Fake FCM', () => {
