@@ -95,7 +95,7 @@ Create a listener:
 node ace make:listener Notification
 ```
 
-Add a listener to `app/Listeners/Notification.js` file.
+Add a listener to `app/Listeners/Notification.ts` file.
 
 ```js
 import { EventsList } from '@ioc:Adonis/Core/Event'
