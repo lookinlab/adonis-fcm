@@ -22,7 +22,7 @@ declare module 'ioc:Adonis/Addons/FCM' {
     /**
      * Returns the last sent message.
      */
-    recent(): object;
+    recent(): object | undefined;
 
     /**
      * Returns the last sent message and removes it from
@@ -45,7 +45,7 @@ declare module 'ioc:Adonis/Addons/FCM' {
   }
 
   export interface FCMContract {
-    message(options: FCMMessage): Message;
+    message(options?: FCMMessage): Message;
     fake(): void;
     restore(): void;
 

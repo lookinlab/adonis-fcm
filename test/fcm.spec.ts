@@ -1,5 +1,3 @@
-'use strict'
-
 /*
  * adonis-fcm
  *
@@ -9,20 +7,17 @@
  * file that was distributed with this source code.
  */
 
-const test = require('japa')
-const { Config } = require('@adonisjs/sink')
+import test from 'japa'
+import FCM from '../src/FCM'
+import FakeFCM from '../src/FCM/Fake'
+import { Message } from 'node-gcm'
 
-const FCM = require('../src/FCM')
-const { Message } = require('node-gcm')
+const config = {
+  apiKey: '123123123',
+  requestOptions: {},
+}
 
-let config
-test.group('FCM', (group) => {
-  group.before(() => {
-    config = new Config()
-    config.set('fcm.apiKey', '123123123')
-    config.set('fcm.requestOptions', {})
-  })
-
+test.group('FCM', () => {
   test('Create a message from object', (assert) => {
     const fcm = new FCM(config)
     const message = fcm.message()
@@ -42,7 +37,6 @@ test.group('FCM', (group) => {
     const fcm = new FCM(config)
     fcm.fake()
 
-    assert.isFunction(fcm.recent)
-    assert.isFunction(fcm.clear)
+    assert.instanceOf(fcm.getFake(), FakeFCM)
   })
 })

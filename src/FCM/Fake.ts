@@ -26,8 +26,8 @@ export default class FakeFCM implements FakeFCMContract {
     return this.$messages.pop()
   }
 
-  public all () {
-    return [ ...this.$messages ]
+  public all (): object[] {
+    return JSON.parse(JSON.stringify(this.$messages))
   }
 
   public clear () {

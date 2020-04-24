@@ -30,7 +30,11 @@ export default class FCM implements FCMContract {
     return new Proxy(this, proxyHandler)
   }
 
-  public message (options: FCMMessage): Message {
+  public getFake (): FakeFCM | null {
+    return this.$fake
+  }
+
+  public message (options?: FCMMessage): Message {
     return (options instanceof Message) ? options : new Message(options)
   }
 
