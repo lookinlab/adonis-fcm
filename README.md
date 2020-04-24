@@ -15,11 +15,11 @@ Make sure to install it using `npm` or `yarn`.
 
 ```bash
 # npm
-npm i adonis-fcm
+npm i adonis-fcm@alpha
 node ace invoke adonis-fcm
 
 # yarn
-yarn add adonis-fcm
+yarn add adonis-fcm@alpha
 node ace invoke adonis-fcm
 ```
 
