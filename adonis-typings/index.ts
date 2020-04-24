@@ -71,4 +71,7 @@ declare module 'ioc:Adonis/Addons/FCM' {
       registrationIds: string | string[] | IRecipient
     ): Promise<IResponseBody>;
   }
+
+  const FCM: FCMContract
+  export default FCM
 }
