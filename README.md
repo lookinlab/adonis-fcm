@@ -52,13 +52,14 @@ FCM_API_KEY=YOUR_API_KEY
 import Env from '@ioc:Adonis/Core/Env'
 import { FCMConfig } from '@ioc:Adonis/Addons/FCM'
 
-export default const config: FCMConfig = {
-  apiKey: Env.getOrFail('FCM_API_KEY'),
+const fcmConfig: FCMConfig = {
+  apiKey: Env.getOrFail('FCM_API_KEY') as string,
   requestOptions: {
     // proxy: 'http://127.0.0.1'
     // timeout: 5000
   }
 }
+export default fcmConfig
 ```
 
 ### Step 3: Use service into controllers/routes/listeners
