@@ -1,11 +1,5 @@
 # Adonis FCM (Firebase Cloud Messaging)
 
-**Note**: New release [**for Adonis v5**](https://github.com/lookinlab/adonis-fcm/tree/v1)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/lookinlab/adonis-fcm.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/lookinlab/adonis-fcm.svg?branch=develop)](https://travis-ci.org/lookinlab/adonis-fcm)
-[![Coverage Status](https://coveralls.io/repos/github/lookinlab/adonis-fcm/badge.svg?branch=develop)](https://coveralls.io/github/lookinlab/adonis-fcm?branch=develop)
-
 > Works with AdonisJS v4.*
 
 This wrapper for send messages to Firebase Cloud Messaging with help [node-gcm](https://github.com/ToothlessGear/node-gcm)
@@ -16,13 +10,13 @@ Make sure to install it using [`adonis-cli`](https://github.com/adonisjs/adonis-
 
 ```bash
 # adonis
-adonis install adonis-fcm
+adonis install adonis-fcm@0.1.1
 
 # npm
-npm i adonis-fcm
+npm i adonis-fcm@0.1.1
 
 # yarn
-yarn add adonis-fcm
+yarn add adonis-fcm@0.1.1
 ```
 
 ## How to use
