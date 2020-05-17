@@ -1,15 +1,25 @@
 {
   "name": "adonis-fcm",
-  "version": "0.1.1",
+  "version": "1.0.0-rc3",
   "description": "Firebase Cloud Messaging for AdonisJS",
-  "main": "index.js",
+  "main": "./build/providers/FCMProvider.js",
+  "files": [
+    "build/adonis-typings",
+    "build/providers",
+    "build/templates",
+    "build/src"
+  ],
   "scripts": {
-    "lint": "standard",
+    "lint": "eslint . --ext=.ts",
     "pretest": "npm run lint",
-    "test": "DB=sqlite nyc node japaFile.js",
-    "posttest": "npm run coverage",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test": "node japaFile.js",
+    "clean": "rm -rf build",
+    "compile": "npm run lint && npm run clean && tsc && npm run copy:files",
+    "copy:files": "copyfiles \"templates/*.txt\" build",
+    "build": "npm run compile",
+    "prepublishOnly": "npm run build"
   },
+  "typings": "./build/adonis-typings/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lookinlab/adonis-fcm.git"
@@ -30,19 +40,32 @@
     "node-gcm": "^1.0.2"
   },
   "devDependencies": {
-    "@adonisjs/fold": "^4.0.9",
-    "@adonisjs/sink": "^1.0.17",
-    "coveralls": "^3.0.9",
+    "@adonisjs/fold": "^6.3.3",
+    "@adonisjs/mrm-preset": "^2.3.0",
+    "@types/node": "^13.13.1",
+    "@types/node-gcm": "^1.0.0",
+    "copyfiles": "^2.2.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-adonis": "^1.0.8",
     "japa": "^3.0.1",
-    "nyc": "^15.0.0",
-    "standard": "^14.3.1"
-  },
-  "standard": {
-    "globals": [
-      "use"
-    ]
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
   },
   "directories": {
     "test": "test"
+  },
+  "adonisjs": {
+    "templates": {
+      "config": [
+        "fcm.txt"
+      ]
+    },
+    "env": {
+      "FCM_API_KEY": ""
+    },
+    "types": "adonis-fcm",
+    "providers": [
+      "adonis-fcm"
+    ]
   }
 }
