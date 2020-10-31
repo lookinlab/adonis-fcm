@@ -53,7 +53,7 @@ import Env from '@ioc:Adonis/Core/Env'
 import { FCMConfig } from '@ioc:Adonis/Addons/FCM'
 
 const fcmConfig: FCMConfig = {
-  apiKey: Env.getOrFail('FCM_API_KEY') as string,
+  apiKey: Env.get('FCM_API_KEY'),
   requestOptions: {
     // proxy: 'http://127.0.0.1'
     // timeout: 5000
@@ -151,5 +151,5 @@ export default class NotificationListener {
     const badTokens = registrationTokens.filter((token, i) => response[i].error !== null);
     await Device.query().whereIn('token', badTokens).delete();
   }
-};
+}
 ```
