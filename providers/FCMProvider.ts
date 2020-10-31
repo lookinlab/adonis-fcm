@@ -7,18 +7,17 @@
  * file that was distributed with this source code.
  */
 
-import { IocContract } from '@adonisjs/fold'
+import { ApplicationContract } from '@ioc:Adonis/Core/Application'
 import FCM from '../src/FCM'
 
 export default class FCMProvider {
-  constructor (protected container: IocContract) {
-  }
+  public static needsApplication = true
+  constructor (protected app: ApplicationContract) {}
 
   public register (): void {
-    this.container.singleton('Adonis/Addons/FCM', () => {
-      const config = this.container.use('Adonis/Core/Config').get('fcm', {})
+    this.app.container.singleton('Adonis/Addons/FCM', () => {
+      const config = this.app.container.use('Adonis/Core/Config').get('fcm', {})
       return new FCM(config)
     })
-    // this.container.alias('Adonis/Addons/FCM', 'FCM')
   }
 }

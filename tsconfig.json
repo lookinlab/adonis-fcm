@@ -3,7 +3,10 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": [
+      "@adonisjs/core"
+    ]
   },
   "exclude": [
     "node_modules",
