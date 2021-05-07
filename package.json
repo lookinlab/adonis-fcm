@@ -37,19 +37,19 @@
     "url": "https://github.com/lookinlab/adonis-fcm/issues"
   },
   "dependencies": {
-    "node-gcm": "^1.0.3"
+    "node-gcm": "^1.0.4"
   },
   "devDependencies": {
-    "@adonisjs/core": "^5.0.4-preview-rc-2",
-    "@adonisjs/mrm-preset": "^2.4.0",
-    "@types/node": "^14.14.6",
+    "@adonisjs/core": "^5.1.6",
+    "@adonisjs/mrm-preset": "^3.0.0",
+    "@types/node": "^15.0.2",
     "@types/node-gcm": "^1.0.0",
-    "copyfiles": "^2.4.0",
-    "eslint": "^7.12.1",
-    "eslint-plugin-adonis": "^1.0.15",
+    "copyfiles": "^2.4.1",
+    "eslint": "^7.25.0",
+    "eslint-plugin-adonis": "^1.3.1",
     "japa": "^3.1.1",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.5"
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
   },
   "directories": {
     "test": "test"
