@@ -1,6 +1,6 @@
 {
   "name": "adonis-fcm",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Firebase Cloud Messaging for AdonisJS",
   "main": "index.js",
   "scripts": {
