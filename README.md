@@ -15,11 +15,11 @@ Make sure to install it using `npm` or `yarn`.
 
 ```bash
 # npm
-npm i adonis-fcm@alpha
+npm i adonis-fcm
 node ace invoke adonis-fcm
 
 # yarn
-yarn add adonis-fcm@alpha
+yarn add adonis-fcm
 node ace invoke adonis-fcm
 ```
 
@@ -74,7 +74,7 @@ import Event from '@ioc:Adonis/Core/Event'
 export default class NotificationController {
   // ...
   async store({ request }: HttpContextContract) {
-    const { title, text } = request.post()
+    const { title, text } = request.body()
     const notification = await Notification.create({ title, text })
 
     Event.emit('notification::created', notification)
@@ -103,7 +103,7 @@ import { EventsList } from '@ioc:Adonis/Core/Event'
 import FCM from '@ioc:Adonis/Addons/FCM'
 
 export default class NotificationListener {
-  public async created (notification: EventsList['notification::created']) {
+  public async created(notification: EventsList['notification::created']) {
     const { title, text } = notification.toJSON();
     
     const recipients = { condition: "'notifications' in topics" }; // or { registrationTokens: [...] }
@@ -139,7 +139,7 @@ import FCM from '@ioc:Adonis/Addons/FCM'
 import Device from 'App/Models/Device'
 
 export default class NotificationListener {
-  public async created (notification: EventsList['notification::created']) {
+  public async created(notification: EventsList['notification::created']) {
     const { title, text } = notification.toJSON();
 
     const devices = await Device.all();
