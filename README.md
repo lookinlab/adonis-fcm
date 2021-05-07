@@ -1,6 +1,6 @@
 # Adonis FCM (Firebase Cloud Messaging)
 
-> Works with AdonisJS v4.*
+> Works with AdonisJS v4.* (legacy)
 
 This wrapper for send messages to Firebase Cloud Messaging with help [node-gcm](https://github.com/ToothlessGear/node-gcm)
 
@@ -10,13 +10,13 @@ Make sure to install it using [`adonis-cli`](https://github.com/adonisjs/adonis-
 
 ```bash
 # adonis
-adonis install adonis-fcm@0.1.1
+adonis install adonis-fcm@legacy
 
 # npm
-npm i adonis-fcm@0.1.1
+npm i adonis-fcm@legacy
 
 # yarn
-yarn add adonis-fcm@0.1.1
+yarn add adonis-fcm@legacy
 ```
 
 ## How to use
@@ -61,7 +61,7 @@ const Notification = use('App/Models/Notification')
 const Event = use('Event')
 
 class NotificationController {
-  ...
+  // ...
   async store({ request }) {
     const { title, text } = request.post()
     const notification = await Notification.create({ title, text })
