@@ -1,13 +1,11 @@
 # Adonis FCM (Firebase Cloud Messaging)
 
-> Works with AdonisJS v5
-
-Version [**for AdonisJS v4**](https://github.com/lookinlab/adonis-fcm/tree/v0)
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/lookinlab/adonis-fcm.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/lookinlab/adonis-fcm.svg?branch=develop)](https://travis-ci.org/lookinlab/adonis-fcm)
+[![npm-image]][npm-url] [![license-image]][license-url] [![typescript-image]][typescript-url]
 
 This wrapper for send messages to Firebase Cloud Messaging with help [node-gcm](https://github.com/ToothlessGear/node-gcm)
+> Works with AdonisJS v5
+
+Docs [**for AdonisJS v4**](https://github.com/lookinlab/adonis-fcm/tree/v0)
 
 ## Installation
 
@@ -153,3 +151,12 @@ export default class NotificationListener {
   }
 }
 ```
+
+[npm-image]: https://img.shields.io/npm/v/adonis-fcm?logo=npm&style=for-the-badge
+[npm-url]: https://www.npmjs.com/package/adonis-fcm
+
+[license-image]: https://img.shields.io/npm/l/adonis-fcm?style=for-the-badge&color=blueviolet
+[license-url]: https://github.com/lookinlab/adonis-fcm/blob/develop/LICENSE.md
+
+[typescript-image]: https://img.shields.io/npm/types/adonis-fcm?color=294E80&label=%20&logo=typescript&style=for-the-badge
+[typescript-url]: https://github.com/lookinlab
